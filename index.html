@@ -26,7 +26,7 @@
         <header>
         
             <nav class="navbar navbar-expand-lg navbar-light fill">
-                <a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a>
+                <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -46,6 +46,9 @@
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="cart.html">Cart</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
@@ -173,6 +176,7 @@
                     </div>
                 </div>
                 <div class="row justify-content-center">
+                    
                     <!-- First Row of 3 Products -->
                     <div class="col-md-face">
                         <div class="card text-center" style="width: 20rem;border:black;">
@@ -530,36 +534,21 @@
                                 <h5 class="card-title"><b>Body Wash</b></h5>
                                 <p class="card-text">Gentle body wash with<br> natural ingredients.</p>
                                 <h5><b>$28</b></h5>
-                                <a href="#" class="face care - v1">BUY NOW
-                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z" />
-                                        <path fill-rule="evenodd"
-                                            d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z" />
-                                    </svg>
-                                </a>
+                                <button id="addToCartBtn_BB" onclick="addToCart('BB', 35, 'images/bodynhair/vasline_bodylotion.png')" class="face care - v1">ADD TO CART
+                                    
+                                </button>
                                 <a href="#" class="face care - v1"> ADD TO CART </a>
                             </div>
                         </div>
-                    </div>
+                    </div> 
                     <div class="col-md-body">
                         <div class="card text-center" style="width: 20rem;border:black;">
                             <img src="images/bodynhair/victoria_secret_romantic_body_lotion.png" class="card-img-top" alt="">
                             <div class="card-body">
                                 <h5 class="card-title"><b>Body Wash</b></h5>
                                 <p class="card-text">Gentle body wash with <br>natural ingredients.</p>
-                                <h5><b>$28</b></h5>
-                                <a href="#" class="face care - v1">BUY NOW
-                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z" />
-                                        <path fill-rule="evenodd"
-                                            d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="face care - v1"> ADD TO CART </a>
+                                <h5><b>Rs 28</b></h5>
+                                <button id="addToCartBtn_BodyWash" onclick="addToCart('Body Wash', 28, 'images/bodynhair/victoria_secret_romantic_body_lotion.png')" class="face care - v1">ADD TO CART</button>
                             </div>
                         </div>
                     </div>
@@ -630,5 +619,49 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
 </body>
+
+<script>
+    function addToCart(productName, price, imageUrl) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push({name: productName, price: price, quantity: 1, image: imageUrl});
+        localStorage.setItem('cart', JSON.stringify(cart));
+        
+        // Change button text and functionality
+        const buttonId = `addToCartBtn_${productName.replace(/\s+/g, '')}`;
+        const button = document.getElementById(buttonId);
+        button.textContent = 'GO TO CART';
+        button.onclick = () => window.location.href = 'cart.html';
+    }
+
+    // function addToCart(productName, price) {
+    //     let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    //     cart.push({name: productName, price: price, quantity: 1});
+    //     localStorage.setItem('cart', JSON.stringify(cart));
+        
+    //     // Change button text and functionality
+    //     const buttonId = `addToCartBtn_${productName.replace(/\s+/g, '')}`;
+    //     const button = document.getElementById(buttonId);
+    //     button.textContent = 'GO TO CART';
+    //     button.onclick = () => window.location.href = 'cart.html';
+    // }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.forEach(item => {
+            const buttonId = `addToCartBtn_${item.name.replace(/\s+/g, '')}`;
+            const button = document.getElementById(buttonId);
+            if (button) {
+                button.textContent = 'GO TO CART';
+                button.onclick = () => window.location.href = 'cart.html';
+            }
+        });
+    });
+    function buyNow(productName, price) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push({name: productName, price: price, quantity: 1});
+        localStorage.setItem('cart', JSON.stringify(cart));
+        window.location.href = 'cart.html';
+    }
+</script>
 
 </html>
