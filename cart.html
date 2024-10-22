@@ -12,24 +12,110 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <!-- ... other links ... -->
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMO51vO+xYhGx0F2VYI4I8TXyFOn5JhHzY4A0k" crossorigin="anonymous">
-    
     <!-- Main css -->
     <link rel="stylesheet" href="style.css">
-    <title>Velvet Skin & Co. </title>
+    <title>Velvet Skin & Co.</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Abel', sans-serif;
+        }
+
+        .cart-table {
+            width: 100%; /* Set the table to full width */
+            margin: 20px 0;
+        }
+        
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+        }
+
+        .modal-content {
+            background-color: white; /* White background */
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px; /* Some padding */
+            border: 1px solid #888; /* Grey border */
+            width: 300px; /* Set a width */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        }
+
+        h2 {
+            margin-bottom: 20px; /* Space below heading */
+        }
+
+        label {
+            display: block; /* Block for labels */
+            margin: 10px 0 5px; /* Margin for labels */
+        }
+
+        input[type="text"],
+        select {
+            width: 100%; /* Full width */
+            padding: 10px; /* Padding */
+            margin-bottom: 20px; /* Space below inputs */
+            border: 1px solid #ccc; /* Light border */
+            border-radius: 5px; /* Rounded edges */
+        }
+
+        button {
+            background-color: #28a745; /* Green background */
+            color: white; /* White text */
+            padding: 10px 15px; /* Padding */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded edges */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+
+        button:disabled {
+            background-color: #ccc; /* Grey when disabled */
+            cursor: not-allowed; /* Not allowed cursor */
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            text-align: left;
+        }
+    </style>
 </head>
 
 <body>
     <main class="container">
-        <!-- Header start  -->
+        <!-- Header Start -->
         <header>
-        
             <nav class="navbar navbar-expand-lg navbar-light fill">
-                <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt=""></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Velvet Skin & Co."></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -39,13 +125,10 @@
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Product</a>
+                            <a class="nav-link" href="about.html">About</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">About Us</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Contact Us</a>
+                            <a class="nav-link" href="contact.html">Contact</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="cart.html">Cart</a>
@@ -59,95 +142,178 @@
                 </div>
             </nav>
         </header>
+        <!-- Header End -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Cart</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <style>
-        .cart-container {
-            padding: 50px;
-        }
-        .cart-title {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .cart-table {
-            width: 100%;
-        }
-        .cart-table th, .cart-table td {
-            text-align: center;
-        }
-    </style>
-</head>
-    <body>
-        <main class="cart-container">
-            <h1 class="cart-title">My Cart</h1>
-            
-            <!-- Cart Table -->
-            <table class="table table-bordered cart-table">
-                <thead>
-                    <tr>
-                        <th> </th>
-                        <th>Product Name</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                        <th>Total</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody id="cartItems">
-                    <!-- Cart items will be dynamically added here -->
-                </tbody>
-            </table>
+        <h1 class="cart-title text-center my-5">My Cart</h1>
 
-            <!-- Total Price -->
-            <div class="text-right">
-                <h4>Total: Rs <span id="cartTotal">0</span> </h4>
+        <!-- Cart Table -->
+        <div class="d-flex justify-content-center">
+            <div class="col-lg-12">
+                <table class="table table-bordered cart-table text-center">
+                    <thead>
+                        <tr>
+                            <th> </th>
+                            <th>Product Name</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cartItems">
+                        <!-- Cart items will be dynamically added here -->
+                    </tbody>
+                </table>
             </div>
-            <div class="text-right">
-                <button class="btn btn-success">Proceed to Checkout</button>
-            </div>
-        </main>
+        </div>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                function loadCart() {
-                    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-                    const cartItemsContainer = document.getElementById('cartItems');
-                    let total = 0;
-                    cartItemsContainer.innerHTML = '';
-            
-                    cart.forEach((item, index) => {
-                        let productTotal = item.price * item.quantity;
-                        total += productTotal;
-            
-                        const row = document.createElement('tr');
-                        row.innerHTML = `
-                            <td><img src="${item.image}" alt="${item.name}" style="height: 50px;"></td>
-                            <td>${item.name}</td>
-                            <td>${item.quantity}</td>
-                            <td>${item.price}</td>
-                            <td>${productTotal.toFixed(2)}</td>
-                            <td><button class="btn btn-danger btn-sm" onclick="removeFromCart(${index})">Remove</button></td>
-                        `;
-                        cartItemsContainer.appendChild(row);
-                    });
-            
-                    document.getElementById('cartTotal').textContent = total.toFixed(2);
+        <!-- Total Price -->
+        <div class="text-right">
+            <h4>Total: Rs <span id="cartTotal">0</span> </h4>
+        </div>
+        <div class="text-right">
+            <button class="btn btn-success" id="checkoutButton">Proceed to Checkout</button>
+        </div>
+
+        <!-- Modal for Address and Payment -->
+        
+
+    </main>
+    
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content text-center">
+            <h2>Checkout</h2>
+            <form id="checkoutForm">
+                <label for="address">Full Address:</label>
+                <input type="text" id="address" name="address" required>
+    
+                <label for="paymentMethod">Payment Method:</label>
+                <select id="paymentMethod" name="paymentMethod" required>
+                    <option value="">Select Payment Method</option>
+                    <option value="Credit Card">Credit Card</option>
+                    <option value="Debit Card">Debit Card</option>
+                    <option value="PayPal">PayPal</option>
+                </select>
+    
+                <button type="button" id="payButton" disabled>Pay Rs <span id="totalAmount"></span></button>
+            </form>
+        </div>
+    </div>
+    
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load the cart and display items
+            function loadCart() {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const cartItemsContainer = document.getElementById('cartItems');
+                let total = 0;
+                cartItemsContainer.innerHTML = '';
+
+                cart.forEach((item, index) => {
+                    let productTotal = item.price * item.quantity;
+                    total += productTotal;
+
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td><img src="${item.image}" alt="${item.name}" style="height: 50px;"></td>
+                        <td>${item.name}</td>
+                        <td>
+                            <button class="btn btn-sm btn-primary" onclick="changeQuantity(${index}, -1)">-</button>
+                            <span id="quantity-${index}">${item.quantity}</span>
+                            <button class="btn btn-sm btn-primary" onclick="changeQuantity(${index}, 1)">+</button>
+                        </td>
+                        <td>${item.price}</td>
+                        <td id="total-${index}">${productTotal.toFixed(2)}</td>
+                        <td><button class="btn btn-danger btn-sm" onclick="removeFromCart(${index})">Remove</button></td>
+                    `;
+                    cartItemsContainer.appendChild(row);
+                });
+
+                document.getElementById('cartTotal').textContent = total.toFixed(2);
+                document.getElementById('totalAmount').textContent = total.toFixed(2);
+            }
+
+            window.changeQuantity = function(index, delta) {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart[index].quantity += delta;
+
+                // Prevent quantity from going below 1
+                if (cart[index].quantity < 1) {
+                    cart[index].quantity = 1;
                 }
-            
-                window.removeFromCart = function(index) {
-                    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-                    cart.splice(index, 1);
-                    localStorage.setItem('cart', JSON.stringify(cart));
-                    loadCart();
-                }
-            
+
+                localStorage.setItem('cart', JSON.stringify(cart));
+                loadCart(); // Reload cart to update totals and UI
+            };
+
+            window.removeFromCart = function(index) {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart.splice(index, 1);
+                localStorage.setItem('cart', JSON.stringify(cart));
                 loadCart();
+            };
+
+            // Checkout Button - Show Modal
+            const checkoutButton = document.getElementById('checkoutButton');
+            const checkoutModal = document.getElementById('checkoutModal');
+            const payButton = document.getElementById('payButton');
+            const addressInput = document.getElementById('address');
+            const paymentMethodSelect = document.getElementById('paymentMethod');
+
+            checkoutButton.addEventListener('click', () => {
+                checkoutModal.style.display = 'flex';
             });
-        </script>
-    </body>
+
+            // Enable Pay Button only when all fields are filled
+            function validateForm() {
+                if (addressInput.value && paymentMethodSelect.value) {
+                    payButton.disabled = false;
+                } else {
+                    payButton.disabled = true;
+                }
+            }
+
+            addressInput.addEventListener('input', validateForm);
+            paymentMethodSelect.addEventListener('change', validateForm);
+
+            // Pay Button - Complete Order
+            payButton.addEventListener('click', () => {
+                localStorage.removeItem('cart'); // Empty the cart
+                window.location.href = 'success.html'; // Redirect to success page
+            });
+
+            loadCart(); // Initial load
+        });
+
+        // Get the modal
+        var modal = document.getElementById("checkoutModal");
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none"; // Close the modal
+            }
+        }
+
+        // Function to open the modal (you can call this function wherever you need to open the modal)
+        function openModal() {
+            modal.style.display = "block"; // Show the modal
+        }
+
+        // Example of how to enable the button when there's a total amount
+        function updateTotalAmount(amount) {
+            document.getElementById("totalAmount").innerText = amount;
+            document.getElementById("payButton").disabled = amount <= 0; // Enable button if amount is greater than 0
+        }
+
+    </script>
+
+    <footer>
+        <div class="text-center">
+            <strong>Vedanshi Sinha</strong> &copy; All Right reserved
+        </div>
+    </footer>
+</body>
+
 </html>

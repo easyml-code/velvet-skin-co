@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Fav Icon -->
+    <link rel="icon" href="images/logo.png" type="image/gif" sizes="16x16">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMO51vO+xYhGx0F2VYI4I8TXyFOn5JhHzY4A0k" crossorigin="anonymous">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Velvet Skin & Co. - Contact Us</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Abel', sans-serif;
+        }
+        .contact-section {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .contact-heading {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-control {
+            margin-bottom: 15px;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 16px;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <!-- Header Start -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light fill">
+                <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Velvet Skin & Co."></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="cart.html">Cart</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-shopping-cart" style="font-size: 1.5em;"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Header End -->
+
+        <!-- Contact Us Section Start -->
+        <section class="contact-section text-center my-5">
+            <h1 class="contact-heading">Contact Us</h1>
+            <form id="contactForm">
+                <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                <input type="email" class="form-control" id="email" placeholder="Email Address" required>
+                <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required>
+                <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn btn-primary" id="sendButton" disabled>Send</button>
+            </form>
+        </section>
+        <!-- Contact Us Section End -->
+
+        <footer class="footer">
+            <div>
+                <strong>Vedanshi Sinha</strong> &copy; All Rights Reserved
+            </div>
+        </footer>
+    </main>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js" 
+        integrity="sha384-B4gt1jrGC7Jh4AgXpP9u5TN8RxTn1RQ6M1j6Ql3ly5nGmAjpZ+EqcIH+knZJojsh" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" 
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU/9SOt5Uknv2kuS0C6J6DLpzK8TjLFL5HXZNGihzR37jU" crossorigin="anonymous"></script>
+
+    <script>
+        // Enable the send button only when all fields are filled
+        const inputs = document.querySelectorAll('#contactForm input, #contactForm textarea');
+        const sendButton = document.getElementById('sendButton');
+
+        inputs.forEach(input => {
+            input.addEventListener('input', () => {
+                const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+                sendButton.disabled = !allFilled;
+            });
+        });
+
+        // Show alert on form submission
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert("Thank you for contacting!\nWe will reach out to you soon.");
+            this.reset(); // Reset form fields
+            sendButton.disabled = true; // Disable button after submission
+        });
+    </script>
+</body>
+
+</html>

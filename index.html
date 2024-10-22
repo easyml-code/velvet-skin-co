@@ -39,13 +39,10 @@
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Product</a>
+                            <a class="nav-link" href="about.html">About</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">About Us</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Contact Us</a>
+                            <a class="nav-link" href="contact.html">Contact</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="cart.html">Cart</a>
@@ -61,6 +58,7 @@
         </header>  
         <!-- Header end  -->
 
+        
         <section id="face-body">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -77,7 +75,7 @@
                                 <h1>Clinique moisturiser</h1>
                                 <p><strong> Skin type: For dry to normal, sensitive skin </strong><br>
                                     Helps strengthen and nourish for skin that looks <br> smoother and younger.</p>
-                                <a class="mack-btn">Buy Now
+                                <a class="mack-btn" onclick="buyNow('Clinique moisturiser', 2000, 'images/banner-products/clinique_moisturiser.png')">Buy Now
                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right"
                                         fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
@@ -100,7 +98,8 @@
                                     This creamy formula is clinically proven to provide continuous hydration 
                                     to protect against dryness. Formulated with Micellar Technology that gently 
                                     yet effectively removes dirt, makeup and impurities.</p>
-                                <a class="mack-btn">Buy Now
+                                <a class="mack-btn" onclick="buyNow('Cetaphil Cleanser', 1500, 'images/banner-products/cetaphil.png')">Buy Now
+                       
                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right"
                                         fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
@@ -120,7 +119,7 @@
                             <div class="col-md-6 mack">
                                 <h1>Odinary Glycolic Acid Toner</h1>
                                 <p>A daily surface exfoliator that smooths skin texture,<br> evens tone, and boosts luminosity.</p>
-                                <a class="mack-btn">Buy Now
+                                <a class="mack-btn" onclick="buyNow('Odinary Glycolic Acid Toner', 1200, 'images/banner-products/ordinary_glycolic_acid_toner.png')">Buy Now
                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right"
                                         fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
@@ -143,7 +142,7 @@
                                     Fine Fragrance Mist is the absolute best way to keep the scent going all day, 
                                     every day. Plus, the fragrance is oh-so-glorious that you'll want to take a 
                                     bottle with your everywhere.</p>
-                                <a class="mack-btn">Buy Now
+                                <a class="mack-btn" onclick="buyNow('Bath & Body Works Japanese Cherry Blossom', 1800, 'images/banner-products/bathandbodyworks_cherryblossom.png')">Buy Now
                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right"
                                         fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
@@ -154,7 +153,7 @@
                                 </a>
                             </div>
                             <div class="col-md-6">
-                            <img src="images/banner-products/clinique_sunscreen.png" style="height: 400px; object-fit: contain;" alt="" class="img-fluid">
+                            <img src="images/banner-products/bathandbodyworks_cherryblossom.png" style="height: 400px; object-fit: contain;" alt="" class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -185,17 +184,8 @@
                             <div class="card-body">
                                 <h5 class="card-title"><b>Beauty of Joseon Moisturiser</b></h5>
                                 <p class="card-text">Hydrating and soothing face moisturiser for daily use.</p>
-                                <h5><b>$30</b></h5>
-                                <a href="#" class="face care - v1">BUY NOW
-                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z" />
-                                        <path fill-rule="evenodd"
-                                            d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="face care - v1"> ADD TO CART </a>
+                                <h5><b>Rs 1800</b></h5>
+                                <button id="addToCartBtn_BeautyofJoseonMoisturiser" onclick="addToCart('Beauty of Joseon Moisturiser',1800, 'images/face/beauty_of_joseon_moisturiser.png')" class="face care - v1">ADD TO CART</button>
                             </div>
                         </div>
                     </div>
@@ -205,17 +195,8 @@
                             <div class="card-body">
                                 <h5 class="card-title"><b>Beauty of Joseon Sunscreen</b></h5>
                                 <p class="card-text">Lightweight, broad-spectrum sunscreen with SPF 50.</p>
-                                <h5><b>$25</b></h5>
-                                <a href="#" class="face care - v1">BUY NOW
-                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z" />
-                                        <path fill-rule="evenodd"
-                                            d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="face care - v1"> ADD TO CART </a>
+                                <h5><b>Rs 1350</b></h5>
+                                <button id="addToCartBtn_BeautyofJoseonSunscreen" onclick="addToCart('Beauty of Joseon Sunscreen',1350, 'images/face/beauty_of_joseon_sunscreen.png')" class="face care - v1">ADD TO CART</button>
                             </div>
                         </div>
                     </div>
@@ -225,142 +206,87 @@
                             <div class="card-body">
                                 <h5 class="card-title"><b>Beauty of Joseon Toner</b></h5>
                                 <p class="card-text">Revitalizing toner for bright and even complexion.</p>
-                                <h5><b>$28</b></h5>
-                                <a href="#" class="face care - v1">BUY NOW
-                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z" />
-                                        <path fill-rule="evenodd"
-                                            d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="face care - v1"> ADD TO CART </a>
+                                <h5><b>Rs 1400</b></h5>
+                                <button id="addToCartBtn_BeautyofJoseonToner" onclick="addToCart('Beauty of Joseon Toner',1400, 'images/face/beauty_of_joseon_toner.png')" class="face care - v1">ADD TO CART</button>
                             </div>
                         </div>
                     </div>
-                
+    
+                    <!-- Second Row of 3 Products -->
                     <div class="col-md-face">
+                        <br>
                         <div class="card text-center" style="width: 20rem;border:black;">
-                            <img src="images/face/cetaphil_toner.png" class="card-img-top img-fluid" style="height: 300px; object-fit: contain;" alt="Clinique Sunscreen">
+                            <img src="images/face/minimalist_niacinamide_serum.png" class="card-img-top img-fluid" style="height: 300px; object-fit: contain;" alt="Beauty of Joseon Moisturiser">
                             <div class="card-body">
-                                <h5 class="card-title"><b>Clinique Sunscreen</b></h5>
-                                <p class="card-text">Broad-spectrum UVA/UVB sunscreen with SPF 50.</p>
-                                <h5><b>$35</b></h5>
-                                <a href="#" class="face care - v1">BUY NOW
-                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z" />
-                                        <path fill-rule="evenodd"
-                                            d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="face care - v1"> ADD TO CART </a>
+                                <h5 class="card-title"><b>Minimalist Niacinamide Serum</b></h5>
+                                <p class="card-text"> Soothing face serum that controls excess sebum production.</p>
+                                <h5><b>Rs 549</b></h5>
+                                <button id="addToCartBtn_MinimalistNiacinamideSerum" onclick="addToCart('Minimalist Niacinamide Serum',549, 'images/face/minimalist_niacinamide_serum.png')" class="face care - v1">ADD TO CART</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-face">
+                        <br>
                         <div class="card text-center" style="width: 20rem;border:black;">
-                            <img src="images/face/clinique_moisturiser.png" class="card-img-top img-fluid" style="height: 300px; object-fit: contain;" alt="Cetaphil Toner">
+                            <img src="images/face/cetaphil_toner.png" class="card-img-top img-fluid" style="height: 300px; object-fit: contain;" alt="Beauty of Joseon Sunscreen">
                             <div class="card-body">
                                 <h5 class="card-title"><b>Cetaphil Toner</b></h5>
-                                <p class="card-text">Gentle, hydrating toner for sensitive skin.</p>
-                                <h5><b>$22</b></h5>
-                                <a href="#" class="face care - v1">BUY NOW
-                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z" />
-                                        <path fill-rule="evenodd"
-                                            d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="face care - v1"> ADD TO CART </a>
+                                <p class="card-text">Lightweight and super hydrating formula for instant hydration.</p>
+                                <h5><b>Rs 1800</b></h5>
+                                <button id="addToCartBtn_CetaphilToner" onclick="addToCart('Cetaphil Toner',1800, 'images/face/cetaphil_toner.png')" class="face care - v1">ADD TO CART</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-face">
+                        <br>
                         <div class="card text-center" style="width: 20rem;border:black;">
-                            <img src="images/face/clinique_sunscreen.png" class="card-img-top img-fluid" style="height: 300px; object-fit: contain;" alt="Innisfree Cream">
-                            <div class="card-body">
-                                <h5 class="card-title"><b>Clinique Moisturiser</b></h5>
-                                <p class="card-text">Rich moisturizing cream for deep hydration.</p>
-                                <h5><b>$40</b></h5>
-                                <a href="#" class="face care - v1">BUY NOW
-                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z" />
-                                        <path fill-rule="evenodd"
-                                            d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="face care - v1"> ADD TO CART </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-face">
-                        <div class="card text-center" style="width: 20rem;border:black;">
-                            <img src="images/face/cetaphil_toner.png" class="card-img-top img-fluid" style="height: 300px; object-fit: contain;" alt="Clinique Sunscreen">
+                            <img src="images/face/clinique_sunscreen.png" class="card-img-top img-fluid" style="height: 300px; object-fit: contain;" alt="Beauty of Joseon Toner">
                             <div class="card-body">
                                 <h5 class="card-title"><b>Clinique Sunscreen</b></h5>
-                                <p class="card-text">Broad-spectrum UVA/UVB sunscreen with SPF 50.</p>
-                                <h5><b>$35</b></h5>
-                                <a href="#" class="face care - v1">BUY NOW
-                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z" />
-                                        <path fill-rule="evenodd"
-                                            d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="face care - v1"> ADD TO CART </a>
+                                <p class="card-text">Lightweight, broad-spectrum sunscreen with SPF 50.</p>
+                                <h5><b>Rs 4400</b></h5>
+                                <button id="addToCartBtn_CliniqueSunscreen" onclick="addToCart('Clinique Sunscreen',4400, 'images/face/clinique_sunscreen.png')" class="face care - v1">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Third Row of 3 Products -->
+                    <div class="col-md-face">
+                        <br>
+                        <div class="card text-center" style="width: 20rem;border:black;">
+                            <img src="images/face/minimalist_sunscreen.png" class="card-img-top img-fluid" style="height: 300px; object-fit: contain;" alt="Beauty of Joseon Moisturiser">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>Minimalist Sunscreen</b></h5>
+                                <p class="card-text">Hydrating and calming suscreen that is invisible with spf 40.</p>
+                                <h5><b>Rs 500</b></h5>
+                                <button id="addToCartBtn_MinimalistSunscreen" onclick="addToCart('Minimalist Sunscreen',500, 'images/face/minimalist_sunscreen.png')" class="face care - v1">ADD TO CART</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-face">
+                        <br>
                         <div class="card text-center" style="width: 20rem;border:black;">
-                            <img src="images/face/clinique_moisturiser.png" class="card-img-top img-fluid" style="height: 300px; object-fit: contain;" alt="Cetaphil Toner">
+                            <img src="images/face/neutrogena_cleanser.png" class="card-img-top img-fluid" style="height: 300px; object-fit: contain;" alt="Beauty of Joseon Sunscreen">
                             <div class="card-body">
-                                <h5 class="card-title"><b>Cetaphil Toner</b></h5>
-                                <p class="card-text">Gentle, hydrating toner for sensitive skin.</p>
-                                <h5><b>$22</b></h5>
-                                <a href="#" class="face care - v1">BUY NOW
-                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z" />
-                                        <path fill-rule="evenodd"
-                                            d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="face care - v1"> ADD TO CART </a>
+                                <h5 class="card-title"><b>Neutrogena Cleanser</b></h5>
+                                <p class="card-text">Lightwight formula that offers instant hydration leaving skin super soft.</p>
+                                <h5><b>Rs 850</b></h5>
+                                <button id="addToCartBtn_NeutrogenaCleanser" onclick="addToCart('Neutrogena Cleanser',850, 'images/face/neutrogena_cleanser.png')" class="face care - v1">ADD TO CART</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-face">
+                        <br>
                         <div class="card text-center" style="width: 20rem;border:black;">
-                            <img src="images/face/clinique_sunscreen.png" class="card-img-top img-fluid" style="height: 300px; object-fit: contain;" alt="Innisfree Cream">
+                            <img src="images/face/pixi_toner.png" class="card-img-top img-fluid" style="height: 300px; object-fit: contain;" alt="Beauty of Joseon Toner">
                             <div class="card-body">
-                                <h5 class="card-title"><b>Clinique Moisturiser</b></h5>
-                                <p class="card-text">Rich moisturizing cream for deep hydration.</p>
-                                <h5><b>Rs 4000</b></h5>
-                                <a href="#" class="face care - v1">BUY NOW
-                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z" />
-                                        <path fill-rule="evenodd"
-                                            d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="face care - v1"> ADD TO CART </a>
+                                <h5 class="card-title"><b>Pixi Glow Toner</b></h5>
+                                <p class="card-text">Revitalizing toner for bright and even complexion for youthful skin.</p>
+                                <h5><b>Rs 1900</b></h5>
+                                <button id="addToCartBtn_Pixi Glow Toner" onclick="addToCart('Pixi Glow Toner',1900, 'images/face/pixi_toner.png')" class="face care - v1">ADD TO CART</button>
                             </div>
                         </div>
                     </div>
-                
                 </div>
             </div>
         </section>
@@ -389,19 +315,11 @@
                         <div class="card text-center" style="width: 20rem;border:black;">
                             <img src="images/bodynhair/baathandbodyworks_thousand_yeaars_bodymist.png" class="card-img-top" alt="">
                             <div class="card-body">
-                                <h5 class="card-title"><b>Body Lotion</b></h5>
-                                <p class="card-text">Hydrating and nourishing body <br> lotion for soft skin.</p>
-                                <h5><b>$29</b></h5>
-                                <a href="#" class="face care - v1">BUY NOW
-                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z" />
-                                        <path fill-rule="evenodd"
-                                            d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="face care - v1"> ADD TO CART </a>
+                                <h5 class="card-title"><b>Bath&body works Thousand Wishes</b></h5>
+                                <p class="card-text"> A sweet, heart-warming celebration,  <br>wraps you in lasting, beautiful skin.</p>
+                                <h5><b>Rs 1899</b></h5>
+                                <button id="addToCartBtn_Bath&bodyworksThousandWishes " onclick="addToCart('Bath&body works Thousand Wishes',1899, 'images/bodynhair/baathandbodyworks_thousand_yeaars_bodymist.png')" class="face care - v1">ADD TO CART</button> 
+                                
                             </div>
                         </div>
                         </div>
@@ -410,19 +328,13 @@
                         <div class="card text-center" style="width: 20rem;border:black;">
                             <img src="images/bodynhair/bathandbodyworks_cherryblossom.png" class="card-img-top" alt="">
                             <div class="card-body">
-                                <h5 class="card-title"><b>Body Scrub</b></h5>
-                                <p class="card-text">Exfoliating body scrub for <br> smooth and radiant skin.</p>
-                                <h5><b>$35</b></h5>
-                                <a href="#" class="face care - v1">BUY NOW
-                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z" />
-                                        <path fill-rule="evenodd"
-                                            d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="face care - v1"> ADD TO CART </a>
+                                <h5 class="card-title"><b>Japanese Cherryblossom </b></h5>
+                                <p class="card-text"> A graceful blend of Japanese cherry blossom and fresh mimosa petals.</p>
+                                
+                                
+                                <h5><b>Rs 1499</b></h5>
+                                <button id="addToCartBtn_Bath&BodyworksJapaneseCherryblossom " onclick="addToCart('Bath&Bodyworks Japanese Cherryblossom',1499, 'images/bodynhair/bathandbodyworks_cherryblossom.png')" class="face care - v1">ADD TO CART</button> 
+                                
                             </div>
                         </div>
                     </div>
@@ -430,19 +342,10 @@
                         <div class="card text-center" style="width: 20rem;border:black;">
                             <img src="images/bodynhair/bathn_bodylotion.png" class="card-img-top" alt="">
                             <div class="card-body">
-                                <h5 class="card-title"><b>Body Oil</b></h5>
-                                <p class="card-text">Luxurious body oil for <br>deep hydration and glow.</p>
-                                <h5><b>$40</b></h5>
-                                <a href="#" class="face care - v1">BUY NOW
-                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z" />
-                                        <path fill-rule="evenodd"
-                                            d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="face care - v1"> ADD TO CART </a>
+                                <h5 class="card-title"><b>Bath&Body works Body Lotion</b></h5>
+                                <p class="card-text">Luxurious body lotion for <br>deep hydration and glow.</p>
+                                <h5><b>Rs 3500</b></h5>
+                                <button id="addToCartBtn_Bath&BodyworksBodyLotion" onclick="addToCart('Bath&Body works Body Lotion',3500, 'images/bodynhair/bathn_bodylotion.png')" class="face care - v1">ADD TO CART</button> 
                             </div>
                         </div>
                     </div>
@@ -451,19 +354,11 @@
                         <div class="card text-center" style="width: 20rem;border:black;">
                             <img src="images/bodynhair/bodyshop_bodylotion.png" class="card-img-top" alt="">
                             <div class="card-body">
-                                <h5 class="card-title"><b>Shower Gel</b></h5>
-                                <p class="card-text">Refreshing shower gel <br>with soothing fragrance.</p>
-                                <h5><b>$25</b></h5>
-                                <a href="#" class="face care - v1">BUY NOW
-                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z" />
-                                        <path fill-rule="evenodd"
-                                            d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="face care - v1"> ADD TO CART </a>
+                                <h5 class="card-title"><b>BodyShop Almond milk body lotion</b></h5>
+                                <p class="card-text">Refreshing and soothing<br>with refreshing fragrance.</p>
+                                <h5><b>Rs 1299</b></h5>
+                                <button id="addToCartBtn_BodyShopAlmondmilkbodylotion" onclick="addToCart('BodyShop Almond milk body lotion',1299, 'images/bodynhair/bodyshop_bodylotion.png')" class="face care - v1">ADD TO CART</button> 
+                                
                             </div>
                         </div>
                     </div>
@@ -471,19 +366,10 @@
                         <div class="card text-center" style="width:20rem;border:black;">
                             <img src="images/bodynhair/Gisou_hairmask.png" class="card-img-top" alt="">
                             <div class="card-body">
-                                <h5 class="card-title"><b>Body Butter</b></h5>
-                                <p class="card-text">Ultra-rich body butter <br>for intense moisturization.</p>
-                                <h5><b>$32</b></h5>
-                                <a href="#" class="face care - v1">BUY NOW
-                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z" />
-                                        <path fill-rule="evenodd"
-                                            d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="face care - v1"> ADD TO CART </a>
+                                <h5 class="card-title"><b>Gisou Hair mask</b></h5>
+                                <p class="card-text">Ultra-rich and thick <br>formula for intense moisturization.</p>
+                                <h5><b>Rs 4200</b></h5>
+                                <button id="addToCartBtn_GisouHairmask" onclick="addToCart('Gisou Hair mask', 4200, 'images/bodynhair/Gisou_hairmask.png')" class="face care - v1">ADD TO CART</button> 
                             </div>
                         </div>
                     </div>
@@ -491,66 +377,49 @@
                         <div class="card text-center" style="width: 20rem;border:black;">
                             <img src="images/bodynhair/kerastase_shampoo.png" class="card-img-top" alt="">
                             <div class="card-body">
-                                <h5 class="card-title"><b>Body Wash</b></h5>
-                                <p class="card-text">Gentle body wash with<br> natural ingredients.</p>
-                                <h5><b>$28</b></h5>
-                                <a href="#" class="face care - v1">BUY NOW
-                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z" />
-                                        <path fill-rule="evenodd"
-                                            d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="face care - v1"> ADD TO CART </a>
+                                <h5 class="card-title"><b>Kerastase Shampoo</b></h5>
+                                <p class="card-text">Gentle and paraben-free<br>enriched with nourishing ingredients.</p>
+                                <h5><b>Rs 4600</b></h5>
+                                <button id="addToCartBtn_KerastaseShampoo" onclick="addToCart('Kerastase Shampoo', 4600, 'images/bodynhair/kerastase_shampoo.png')" class="face care - v1">ADD TO CART</button>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="col-md-body">
+                        <br>
                         <div class="card text-center" style="width: 20rem;border:black;">
                             <img src="images/bodynhair/sol_de_jaaneiro_body_mist.png" class="card-img-top" alt="">
                             <div class="card-body">
-                                <h5 class="card-title"><b>Body Wash</b></h5>
-                                <p class="card-text">Gentle body wash with<br> natural ingredients.</p>
-                                <h5><b>$28</b></h5>
-                                <a href="#" class="face care - v1">BUY NOW
-                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right"
-                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z" />
-                                        <path fill-rule="evenodd"
-                                            d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="face care - v1"> ADD TO CART </a>
+                                <h5 class="card-title"><b>Sol de Janeiro Body mist</b></h5>
+                                <p class="card-text">Gentle body mist<br>with addictive fragrance.</p>
+                                <h5><b>Rs 3800</b></h5>
+                                <button id="addToCartBtn_SoldeJaneiroBodymist" onclick="addToCart('Sol de Janeiro Body mist', 3800, 'images/bodynhair/sol_de_jaaneiro_body_mist.png')" class="face care - v1">ADD TO CART</button>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-body">
+                        <br>
                         <div class="card text-center" style="width: 20rem;border:black;">
                             <img src="images/bodynhair/vasline_bodylotion.png" class="card-img-top" alt="">
                             <div class="card-body">
-                                <h5 class="card-title"><b>Body Wash</b></h5>
-                                <p class="card-text">Gentle body wash with<br> natural ingredients.</p>
-                                <h5><b>$28</b></h5>
-                                <button id="addToCartBtn_BB" onclick="addToCart('BB', 35, 'images/bodynhair/vasline_bodylotion.png')" class="face care - v1">ADD TO CART
-                                    
-                                </button>
-                                <a href="#" class="face care - v1"> ADD TO CART </a>
+                                <h5 class="card-title"><b>Vaseline Derma-Care bodylotion</b></h5>
+                                <p class="card-text">Nourishing for the skin<br>with its derma-proven formulation.</p>
+                                <h5><b>Rs 449</b></h5>
+                                <button id="addToCartBtn_VaselineDerma-Carebodylotion" onclick="addToCart('Vaseline Derma-Care bodylotion', 449, 'images/bodynhair/vasline_bodylotion.png')" class="face care - v1">ADD TO CART</button>
                             </div>
                         </div>
                     </div> 
                     <div class="col-md-body">
+                        <br>
                         <div class="card text-center" style="width: 20rem;border:black;">
                             <img src="images/bodynhair/victoria_secret_romantic_body_lotion.png" class="card-img-top" alt="">
                             <div class="card-body">
-                                <h5 class="card-title"><b>Body Wash</b></h5>
-                                <p class="card-text">Gentle body wash with <br>natural ingredients.</p>
-                                <h5><b>Rs 28</b></h5>
-                                <button id="buyNowBtn_BodyWash" onclick="buyNow('Body Wash', 28, 'images/bodynhair/victoria_secret_romantic_body_lotion.png')" class="face care - v1">BUY NOW</button>
-                                <button id="addToCartBtn_BodyWash" onclick="addToCart('Body Wash', 28, 'images/bodynhair/victoria_secret_romantic_body_lotion.png')" class="face care - v1">ADD TO CART</button>
+                                <h5 class="card-title"><b>Victoria Secret Romantic Body lotion</b></h5>
+                                <p class="card-text">Romantic fragrance lotion is a fresh <br>and feminine fragrance Mist </p>
+                                <h5><b>Rs 2499</b></h5>
+                                
+                                <button id="addToCartBtn_VictoriaSecretRomanticBodylotion" onclick="addToCart('Victoria Secret Romantic Body lotion', 2499, 'images/bodynhair/victoria_secret_romantic_body_lotion.png')" class="face care - v1">ADD TO CART</button>
                             </div>
                         </div>
                     </div>
@@ -606,6 +475,7 @@
             </div>
         </footer>
     </main>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
