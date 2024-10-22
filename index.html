@@ -36,7 +36,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Home</a>
+                            <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="#">Product</a>
@@ -58,12 +58,13 @@
                     </ul>
                 </div>
             </nav>
-        </header>
+        </header>  
         <!-- Header end  -->
 
         <section id="face-body">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
+                    
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
@@ -168,10 +169,10 @@
                 <div class="facecare-header">
                     <div class="row">
                         <div class="col-md-face">
-                            <h1>Face Care</h1><br>
+                            <h1 style="margin-top: 50px;">&nbsp;&nbsp;&nbsp;&nbsp;FACE CARE</h1><br>
                         </div>
                         <div class="col-md-6 text-right">
-                            <h5></h5>
+                            <h5> </h5>
                         </div>
                     </div>
                 </div>
@@ -374,7 +375,7 @@
                 <div class="bodycare-header">
                     <div class="row">
                         <div class="col-md-body">
-                            <h1>Body & Hair Care</h1><br><br>
+                            <h1>&nbsp;&nbsp;&nbsp;&nbsp;BODY & HAIR CARE</h1><br><br>
                         </div>
                         <div class="col-md-body text-right">
                             <h5></h5>
@@ -548,6 +549,7 @@
                                 <h5 class="card-title"><b>Body Wash</b></h5>
                                 <p class="card-text">Gentle body wash with <br>natural ingredients.</p>
                                 <h5><b>Rs 28</b></h5>
+                                <button id="buyNowBtn_BodyWash" onclick="buyNow('Body Wash', 28, 'images/bodynhair/victoria_secret_romantic_body_lotion.png')" class="face care - v1">BUY NOW</button>
                                 <button id="addToCartBtn_BodyWash" onclick="addToCart('Body Wash', 28, 'images/bodynhair/victoria_secret_romantic_body_lotion.png')" class="face care - v1">ADD TO CART</button>
                             </div>
                         </div>
@@ -590,21 +592,19 @@
                     </div>
                     <br>
                     <div class="col-md-6">
+                        <a href = "cart.html">
                         <img src="images/Categories/cart.png" alt="" class="img-fluid">
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- End -->
-
-        <!-- Footer start  -->
         <footer>
             <div class="text-center">
                 <strong>Vedanshi Sinha</strong> &copy; All Right reserved
             </div>
         </footer>
-        <!-- End  -->
     </main>
 
     <!-- Optional JavaScript -->
@@ -633,18 +633,6 @@
         button.onclick = () => window.location.href = 'cart.html';
     }
 
-    // function addToCart(productName, price) {
-    //     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    //     cart.push({name: productName, price: price, quantity: 1});
-    //     localStorage.setItem('cart', JSON.stringify(cart));
-        
-    //     // Change button text and functionality
-    //     const buttonId = `addToCartBtn_${productName.replace(/\s+/g, '')}`;
-    //     const button = document.getElementById(buttonId);
-    //     button.textContent = 'GO TO CART';
-    //     button.onclick = () => window.location.href = 'cart.html';
-    // }
-
     document.addEventListener('DOMContentLoaded', function() {
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
         cart.forEach(item => {
@@ -656,9 +644,9 @@
             }
         });
     });
-    function buyNow(productName, price) {
+    function buyNow(productName, price, imageUrl) {
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        cart.push({name: productName, price: price, quantity: 1});
+        cart.push({name: productName, price: price, quantity: 1, image: imageUrl});
         localStorage.setItem('cart', JSON.stringify(cart));
         window.location.href = 'cart.html';
     }
