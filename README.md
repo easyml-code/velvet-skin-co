@@ -3,7 +3,7 @@
 <p align="center">
   A clean, elegant, and responsive front-end eCommerce template for skincare and cosmetics.
   <br><br>
-  <img src="images/banner-products/clinique_moisturiser.png" alt="Banner" width="80%">
+  <img src="images/banner-products/clinique_moisturiser.png" alt="Banner" width="20%">
 </p>
 
 ---
@@ -58,13 +58,13 @@
 ## 🖼️ UI Screenshots
 
 ### 🏠 Landing Page Carousel
-<img src="images/banner-products/cetaphil.png" width="100%" />
+<img src="images/banner-products/cetaphil.png" width="10%" />
 
 ### 💄 Face Care Section
-<img src="images/face/beauty_of_joseon_moisturiser.png" width="100%" />
+<img src="images/face/beauty_of_joseon_moisturiser.png" width="10%" />
 
 ### 🧴 Body & Hair Care Section
-<img src="images/bodynhair/baathandbodyworks_thousand_yeaars_bodymist.png" width="100%" />
+<img src="images/bodynhair/baathandbodyworks_thousand_yeaars_bodymist.png" width="10%" />
 
 ---
 
@@ -72,10 +72,6 @@
 
 velvet-skin-co/
 ├── images/
-│ ├── banner-products/
-│ ├── face/
-│ ├── bodynhair/
-│ └── Categories/
 ├── index.html
 ├── cart.html
 ├── about.html
